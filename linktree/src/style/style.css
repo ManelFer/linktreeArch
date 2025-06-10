@@ -1,0 +1,155 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(229, 224, 216, 0.5); 
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 800px;
+    width: 90%;
+    margin: 2rem auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+    font-size: 2rem;
+}
+
+.tagline {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.section {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+}
+
+h2 {
+    color: #444;
+    font-size: 1.3rem;
+    margin-top: 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4a6fa5;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #3a5a8f;
+}
+
+.services-list {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+}
+
+.services-list li {
+    padding: 0.3rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.services-list li:before {
+    content: "•";
+    color: #4a6fa5;
+    position: absolute;
+    left: 0;
+}
+
+
+
+.exclusive-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.exclusive-content a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a6fa5;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .content {
+        padding: 3rem;
+    }
+    
+    .social-icons {
+        flex-direction: row;
+    }
+    
+    .exclusive-content {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (max-aspect-ratio: 9/16) {
+    .background {
+        width: auto;
+        height: 100%;
+    }
+}
