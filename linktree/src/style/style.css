@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Arial', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -46,10 +46,42 @@ body, html {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid white;
+    border: 5px solid #725C3F;
     margin-bottom: 1rem;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
+
+// icon styles
+.social-links {
+    margin: 1rem 0;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: none;
+    color:rgb(88, 73, 54);
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+.social-icons a:hover {
+    background-color: #725C3F;
+    color: white;
+}
+// icon styles final
 
 h1 {
     margin: 0;
@@ -57,8 +89,15 @@ h1 {
     font-size: 2rem;
 }
 
-.tagline {
+h6 {
+    margin: 0;
     color: #555;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.tagline {
+    color: rgba(0,0,0,0.8);
     font-style: italic;
     margin-bottom: 2rem;
 }
@@ -66,7 +105,6 @@ h1 {
 .section {
     margin: 1.5rem 0;
     padding: 1rem;
-    background-color: rgba(255,255,255,0.7);
     border-radius: 10px;
 }
 
@@ -77,18 +115,23 @@ h2 {
 }
 
 .btn {
-    display: inline-block;
-    background-color: #4a6fa5;
+    display: flex; /* Usa flexbox para controlar o tamanho */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    background-color: #725C3F;
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    padding: 1rem 1rem;
+    border-radius: 10px;
     text-decoration: none;
     margin-top: 0.5rem;
     transition: background-color 0.3s;
+    width: 100%; /* Garante que ocupe 100% da largura do pai */
+    box-sizing: border-box; /* Inclui padding e border na largura */
 }
 
+
 .btn:hover {
-    background-color: #3a5a8f;
+    background-color: #D0A77B;
 }
 
 .services-list {
@@ -125,6 +168,19 @@ h2 {
     gap: 0.5rem;
     color: #4a6fa5;
     text-decoration: none;
+}
+
+.instagram-link{
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+    border-bottom-color: #725C3F;
+}
+.instagram-link:hover {
+    color: #725C3F;
 }
 
 @media (min-width: 768px) {
