@@ -2,46 +2,72 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luiza França - Arquiteta</title>
-    <link rel="stylesheet" href="linktree/src/style/style.css">
+    <link rel="stylesheet" href="linktree/src/style/style.css" />
+    <link rel="shortcut icon" href="linktree/public/arquitetura.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!--fonte-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <img src="linktree/public/fundo1.jpeg" alt="fundo1" class="background">
-        <div class="content">
-            <!-- Social Media Links -->
-            <div class="social-links">
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+    <div class="flip-container" id="flip-card">
+        <div class="flipper">
+
+            <!-- Frente -->
+            <div class="front">
+                <div class="container">
+                    <img src="linktree/public/fundo1.jpeg" alt="fundo1" class="background" />
+                    <div class="content">
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/arq.luizafranca/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/anna-luiza-frança-moura-913385344/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://wa.me/5579996524316"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+
+                        <img src="linktree/public/perfil.jpeg" alt="perfil" class="profile-img" />
+                        <h1>Luiza França</h1>
+                        <h6>Projetos residenciais | comerciais</h6>
+                        <a href="https://www.instagram.com/arq.luizafranca/" class="instagram-link">@arq.luizafranca</a>
+
+                        <div class="section">
+                            <a href="#" class="btn"> Portifólio </a>
+                            <button class="btn" onclick="flipCard()">Galeria digital</button>
+                            <a href="#" class="btn"> Contato </a>
+                        </div>
+                        <p class="tagline">Seu espaço com identidade, aconchego e funcionalidade.</p>
+                    </div>
                 </div>
             </div>
 
+            <!-- Verso -->
+            <div class="back">
+                <div class="container">
+                    <img src="linktree/public/fundo1.jpeg" alt="fundo2" class="background" />
+                    <div class="content">
+                        <img src="linktree/public/perfil.jpeg" alt="perfil" class="profile-img" />
+                        <h1>Luiza França</h1>
+                        <h6>Galeria de projetos</h6>
 
-            <img src="linktree/public/perfil.jpeg" alt="perfil" class="profile-img">
-            <h1>Luiza França</h1>
-            <h6>Projetos residenciais | comerciais</h6>
-            <a href="https://www.instagram.com/arq.luizafranca/" class="instagram-link">@arq.luizafranca</a>
 
-            <div class="section">
-                <a href="#" class="btn"> Portifólio </a>
-                <a href="#" class="btn"> Galeria digital</a>
-                <a href="#" class="btn"> Contato </a>
+                        <div class="carousel">
+                            <div class="carousel-track">
+                                <img src="linktree/public/fundo1.jpeg" alt="Projeto 1" />
+                                <img src="linktree/public/fundo3.png" alt="Projeto 2" />
+                                <img src="linktree/public/fundo4.png" alt="Projeto 3" />
+                                <img src="linktree/public/fundo5.png" alt="Projeto 4" />
+                            </div>
+                        </div>
+                        <button class="btn back-btn" onclick="flipCard()">Voltar</button>
+                    </div>
+                </div>
             </div>
-            <p class="tagline">Seu espaço com identidade, aconchego e funcionalidade.</p>
 
         </div>
     </div>
+
+    <script src="linktree/src/script/index.js"></script>
 </body>
 
 </html>

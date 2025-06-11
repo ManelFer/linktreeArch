@@ -51,7 +51,6 @@ body, html {
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
-// icon styles
 .social-links {
     margin: 1rem 0;
 }
@@ -81,7 +80,7 @@ body, html {
     background-color: #725C3F;
     color: white;
 }
-// icon styles final
+
 
 h1 {
     margin: 0;
@@ -100,7 +99,124 @@ h6 {
     color: rgba(0,0,0,0.8);
     font-style: italic;
     margin-bottom: 2rem;
+}/* FLIP CARD BASE */
+.flip-container {
+  perspective: 1500px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
+
+.flipper {
+  transition: 0.8s ease;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.flip-container.flip .flipper {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* REUTILIZA ESTILOS */
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(229, 224, 216, 0.5);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 800px;
+  width: 90%;
+  margin: 2rem auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #725C3F;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Reaproveite o restante dos estilos como está... */
+
+/* CAROUSEL MESMO DO EXEMPLO ANTERIOR */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 40px;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-track img {
+  width: 100%;
+  height: 400px;
+  flex: 0 0 100%;
+  object-fit: contain;
+  border-radius: 40px;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(114, 92, 63, 0.6);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
 
 .section {
     margin: 1.5rem 0;
